@@ -2,7 +2,6 @@
 // https://github.com/irjudson/ThingLabs-IoT-Dashboard/blob/master/app.js
 
 var express = require('express.io')
-var uuid = require('uuid');
 var EventHubClient = require('azure-event-hubs').Client;
 var azureStorage = require('azure-storage');
 var sortBy = require('sort-array')
