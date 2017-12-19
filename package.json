@@ -1,0 +1,21 @@
+{
+  "name": "website",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": "4.4.1"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "azure-event-hubs": "0.0.1",
+    "azure-storage": "^2.7.0",
+    "coffeescript": "1.10.0",
+    "connect": "3.4.1",
+    "dotenv": "^4.0.0",
+    "express.io": "1.1.13",
+    "sort-array": "^2.0.0",
+    "uuid": "2.0.2"
+  }
+}
