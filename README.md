@@ -9,7 +9,7 @@ This code was modified from the sample [ThingLabs-IoT-Dashboard](https://github.
 ## Installing to Azure Web App with FTP
 
 1. From the Azure Portal, using the "Node JS Empty Web App" Template create a Node.js Web App 
-2.  From Web App -> Properties copy the ftp user and ftps url
+2. From Web App -> Properties copy the ftp user and ftps url
 2. From Web App - > Application Settings
     | key | Value |
     |---|---|
@@ -24,7 +24,7 @@ This code was modified from the sample [ThingLabs-IoT-Dashboard](https://github.
     * Azure Portal -> Your Web App -> Deployment Creditials
 
 
-4. using your faviourite FTP program (eg FileZilla), copy application including package.json, and web.config. Do not the node_modues directory or the package-lock.json file
+4. Using your faviourite FTP program (eg FileZilla), copy application including package.json, and web.config. Do not the node_modues directory or the package-lock.json file
 5. Install NPM Modules into the Web App
     * Azure Portal -> Web App -> Advanced Tools -> Go -> Debug Console -> CMD
     * cd sites/wwwroot
