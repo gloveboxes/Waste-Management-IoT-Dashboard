@@ -34,4 +34,11 @@ This code was modified from the sample [ThingLabs-IoT-Dashboard](https://github.
     * Web App -> Live Stream to review issues
 
 
+## Node.js Tip. Updating NPM Packages to the latest verison
 
+Check out npm-check-updates to help with this workflow.
+
+### Install npm-check-updates
+1. Run npm-check-updates to list what packages are out of date (basically the same thing as running npm outdated)
+2. Run npm-check-updates -u to update all the versions in your package.json (this is the magic sauce)
+3. Run npm update as usual to install the new versions of your packages based on the updated package.json
