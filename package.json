@@ -13,6 +13,8 @@
     "azure-storage": "^2.7.0",
     "dotenv": "^4.0.0",
     "express.io": "1.1.13",
-    "sort-array": "^2.0.0"
+    "sort-array": "^2.0.0",
+    "coffeescript": "2.1.0",
+    "connect": "3.6.5"
   }
 }
