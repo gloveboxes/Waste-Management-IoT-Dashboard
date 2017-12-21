@@ -14,7 +14,6 @@ catch (err){};
 
 app = express().http().io()
 
-
 var eventHubConnectionString = process.env.EVENTHUB_CONNSTRING || ''
 var eventHubName = process.env.EVENTHUBNAME || 'charts'
 var sensorStateTableConnectionString = process.env.SENSOR_STATE_TABLE_CONNSTRING || ''
@@ -23,7 +22,7 @@ var tableSvc = azureStorage.createTableService(sensorStateTableConnectionString)
 
 // Setup your sessions, just like normal.
 app.use(express.cookieParser())
-app.use(express.session({ secret: 'thinglabs' }))
+app.use(express.session({ secret: 'wastemanagement' }))
 
 
 // Session is automatically setup on initial request.
@@ -67,22 +66,12 @@ app.io.route('ready', function (req) {
   // For each partition, register a callback function
   client.getPartitionIds().then(function (ids) {
     ids.forEach(function (id) {
-      var minutesAgo = 5;
-      var before = (minutesAgo * 60 * 1000);
-      client.createReceiver('$Default', id, { startAfterTime: Date.now() - before })
+      // var minutesAgo = 5;
+      // var before = (minutesAgo * 60 * 1000);
+      client.createReceiver('$Default', id, { startAfterTime: Date.now() })
         .then(function (rx) {
           rx.on('errorReceived', function (err) { console.log(err); });
           rx.on('message', processEvent);
-          // rx.on('message', function(message) {
-          //     console.log(message.body);
-          //     var body = message.body;
-          //     try {
-          //         app.io.broadcast('data', body);
-          //     } catch (err) {
-          //         console.log("Error sending: " + body);
-          //         console.log(typeof(body));
-          //     }
-          // });
         });
     });
   });
